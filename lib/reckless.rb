@@ -7,11 +7,11 @@ require "reckless/results_parser"
 require "reckless/version"
 
 module Reckless
-  def self.search(keywords = nil, options = nil)
+  def self.search(keywords = "", options = {})
     Reckless::Client.new.search(keywords, options)
   end
 
-  def self.recent_arrivals(options = nil)
-    Rackless::Client.new.recent_arrivals(options)
+  def self.recent_arrivals(options = {})
+    Reckless::Client.new.recent_arrivals(options)
   end
 end
