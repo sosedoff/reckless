@@ -10,8 +10,9 @@ describe Reckless::Normalizer do
   describe "#normalize_text" do
     let(:examples) do
       {
-        "ALL CAPS TEXT" => "All Caps Text",
-        "all low text"  => "All Low Text"
+        "ALL CAPS TEXT"        => "All Caps Text",
+        "all low text"         => "All Low Text",
+        "13TH FLOOR ELEVATORS" => "13th Floor Elevators"
       }
     end
 
