@@ -1,6 +1,8 @@
 $:.unshift File.expand_path("../..", __FILE__)
 
 require "simplecov"
+SimpleCov.start
+
 require "reckless"
 
 def fixture_path(filename=nil)
