@@ -23,15 +23,15 @@ describe Reckless::ResultsParser do
       let(:record) { results.first }
 
       it "includes artist name" do
-        expect(record[:artist]).to eq "10,000 MANIACS"
+        expect(record[:artist]).to eq "10,000 Maniacs"
       end
 
       it "includes record title" do
-        expect(record[:title]).to eq "IN MY TRIBE"
+        expect(record[:title]).to eq "In My Tribe"
       end
 
       it "includes label name" do
-        expect(record[:label]).to eq "ELEKTRA"
+        expect(record[:label]).to eq "Elektra"
       end
 
       it "includes price" do

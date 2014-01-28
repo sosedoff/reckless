@@ -9,7 +9,7 @@ module Reckless
     def parse
       find_result_elements.map do |node|
         {
-          artist:    fetch_text(node, "artist"),
+          artist:    normalize_artist(fetch_text(node, "artist")),
           title:     fetch_text(node, "title"),
           label:     fetch_text(node, "label"),
           price:     fetch_price(node.css("td").last),
@@ -32,7 +32,7 @@ module Reckless
 
     def fetch_text(node, name)
       element = node.css("span.#{name}").first
-      element ? element.children.first.text.strip : ""
+      element ? normalize_text(element.children.first.text.strip) : ""
     end
 
     def fetch_type(node)
