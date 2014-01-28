@@ -45,6 +45,10 @@ describe Reckless::ResultsParser do
       it "includes condition" do
         expect(record[:condition]).to eq "Very Good"
       end
+
+      it "includes store name" do
+        expect(record[:store]).to eq "Broadway and Milwaukee Ave"
+      end
     end
   end
 end
