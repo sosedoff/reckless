@@ -58,4 +58,24 @@ describe Reckless::Search do
       expect(search.results.size).to eq 30
     end
   end
+
+  describe "for no results" do
+    let(:page) { fixture("no_results.html") }
+
+    before do
+      Faraday.stub_chain(:get, :body) { page }
+    end
+
+    it "assigns total results count" do
+      expect(search.total_results).to eq 0
+    end
+
+    it "assigns total pages count" do
+      expect(search.total_pages).to eq 0
+    end
+
+    it "assigns results" do
+      expect(search.results).to eq []
+    end
+  end
 end
