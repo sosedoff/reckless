@@ -1,5 +1,5 @@
 module Reckless
-  class Crawler
+  class Client
     BASE_URL = "http://www.reckless.com"
 
     def recent_arrivals(days = 1)
