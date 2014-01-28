@@ -1,6 +1,7 @@
 require "nokogiri"
 require "faraday"
 
+require "reckless/client"
 require "reckless/search"
 require "reckless/results_parser"
 require "reckless/version"
