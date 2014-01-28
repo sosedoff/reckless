@@ -28,13 +28,11 @@ search = Reckless.search("Nirvana")
 search = Reckless.recent_arrivals
 
 # Get search details
-search.url # http://www.reckless.com/index.phpkeywords=&format=&cond=&store=&is_search=true&srch=Search
+search.url           # http://www.reckless.com/index.phpkeywords=&format=&cond=&store=&is_search=true&srch=Search
 search.total_pages   # 15
 search.total_results # 450
-search.page # 1
-
-# Get search results
-search.results # returns an array of results
+search.page          # 1
+search.results       # returns an array of results
 ```
 
 Each search result is a simple hash:
