@@ -27,4 +27,29 @@ describe Reckless::Client do
       expect(result.params).to eq defaults
     end
   end
+
+  describe "#recent_arrivals" do
+    let(:result) { client.recent_arrivals }
+
+    before do
+      Faraday.stub_chain(:get, :body) { fixture("recent_arrivals.html") }
+    end
+
+    it "returns a search result" do
+      expect(result).to be_a Reckless::Search
+    end
+
+    it "includes default search params" do
+      defaults = {
+        page: 1,
+        period: 1,
+        format: "LP",
+        cond: "",
+        store: "",
+        style: 0
+      }
+
+      expect(result.params).to eq defaults
+    end
+  end
 end

@@ -16,5 +16,20 @@ module Reckless
 
       Reckless::Search.new(url, params)
     end
+
+    def recent_arrivals(options = {})
+      url = "#{BASE_URL}/new_arrivals.php"
+
+      params = {
+        page:   options[:page]   || 1,
+        period: options[:period] || 1,
+        format: options[:format] || "LP",
+        cond:   options[:cond]   || "",
+        store:  options[:store]  || "",
+        style:  0
+      }
+
+      Reckless::Search.new(url, params)
+    end
   end
 end
