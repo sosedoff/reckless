@@ -1,5 +1,7 @@
 module Reckless
   class ResultsParser
+    include Reckless::Normalizer
+
     def initialize(body)
       @document = Nokogiri::HTML(body)
     end
