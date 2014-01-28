@@ -20,6 +20,7 @@ describe Reckless::Client do
         format: "LP",
         cond: "",
         store: "",
+        page: 1,
         is_search: true
       }
 

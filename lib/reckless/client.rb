@@ -10,6 +10,7 @@ module Reckless
         format:    options[:format] || "LP",
         cond:      options[:cond]   || "",
         store:     options[:store]  || "",
+        page:      options[:page]   || 1,
         is_search: true
       }
 
