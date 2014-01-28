@@ -7,4 +7,7 @@ require "reckless/results_parser"
 require "reckless/version"
 
 module Reckless
+  def self.search(keywords = nil, options = nil)
+    Reckless::Client.new.search(keywords, options)
+  end
 end
