@@ -1,4 +1,3 @@
-reckless
-========
+# Reckless
 
-Data scraper for reckless.com
+Ruby client for reckless.com website.
