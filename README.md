@@ -39,8 +39,8 @@ Each search result is a simple hash:
 
 ```ruby
 {
-  :artist    => "13TH FLOOR ELEVATORS",
-  :title     => "EASTER EVERYWHERE (180g, REISSUE)",
+  :artist    => "13th Floor Elevators",
+  :title     => "Easter Everywhere (180g, Reissue)",
   :label     => "International Artist",
   :price     => 11.99,
   :type      => "New LP",
