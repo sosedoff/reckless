@@ -5,14 +5,10 @@ module Reckless
     def search(keywords = "", options = {})
       url = "#{BASE_URL}/index.php"
 
-      params = {
-        keywords:  keywords,
-        format:    options[:format] || "LP",
-        cond:      options[:cond]   || "",
-        store:     options[:store]  || "",
-        page:      options[:page]   || 1,
+      params = search_options(options).merge(
+        keywords: keywords,
         is_search: true
-      }
+      )
 
       Reckless::Search.new(url, params)
     end
@@ -20,16 +16,23 @@ module Reckless
     def recent_arrivals(options = {})
       url = "#{BASE_URL}/new_arrivals.php"
 
-      params = {
-        page:   options[:page]   || 1,
+      params = search_options(options).merge(
         period: options[:period] || 1,
-        format: options[:format] || "LP",
-        cond:   options[:cond]   || "",
-        store:  options[:store]  || "",
-        style:  0
-      }
+        style:  options[:style]  || 0
+      )
 
       Reckless::Search.new(url, params)
+    end
+
+    private
+
+    def search_options(options)
+      {
+        page:   options[:page]   || 1,
+        format: options[:format] || "LP",
+        cond:   options[:cond]   || "",
+        store:  options[:store]  || ""
+      }
     end
   end
 end
