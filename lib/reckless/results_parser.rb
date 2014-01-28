@@ -45,7 +45,7 @@ module Reckless
       element = node.css("tr:last-child td b").first
 
       if element
-        text = element.children.first.text
+        text = element.children.first.text.gsub("Condition", "")
         text.scan(/\(([\w\s]+)\)/).flatten.first.to_s.strip
       end
     end
