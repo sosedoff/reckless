@@ -13,8 +13,12 @@ module Reckless
     # Example: Beck, Jeff => Jeff Beck
     #
     def normalize_artist(text)
-      text.gsub(/(([\w]+),\s?([\w]+))/) do |m|
-        m = "#{$3} #{$2}"
+      if text =~ /[\d]+,[\d]+/
+        text
+      else
+        text.gsub(/(([\w]+),\s?([\w]+))/) do |m|
+          m = "#{$3} #{$2}"
+        end
       end
     end
   end

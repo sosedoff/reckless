@@ -25,9 +25,10 @@ describe Reckless::Normalizer do
   describe "#normalize_artist" do
     let(:examples) do
       {
-        "Beck, Jeff" => "Jeff Beck",
-        "Beck,Jeff"  => "Jeff Beck",
-        "Astatke, Mulatu & His Ethiopian Quintet" => "Mulatu Astatke & His Ethiopian Quintet"
+        "Beck, Jeff"             => "Jeff Beck",
+        "Beck,Jeff"              => "Jeff Beck",
+        "Astatke, Mulatu & Band" => "Mulatu Astatke & Band",
+        "10,000 Maniacs"         => "10,000 Maniacs"
       }
     end
 
