@@ -2,6 +2,9 @@
 
 Ruby client to Chicago's records store Reckless.com
 
+[![Build Status](https://travis-ci.org/sosedoff/reckless.png?branch=master)](https://travis-ci.org/sosedoff/reckless)
+[![Code Climate](https://codeclimate.com/github/sosedoff/reckless.png)](https://codeclimate.com/github/sosedoff/reckless)
+
 ## Installation
 
 Add it to your Gemfile:
