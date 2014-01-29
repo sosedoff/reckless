@@ -1,5 +1,6 @@
 require "nokogiri"
 require "faraday"
+require "hashr"
 
 require "reckless/client"
 require "reckless/search"

@@ -7,23 +7,25 @@ module Reckless
     end
 
     def parse
-      find_result_elements.map do |node|
-        {
-          artist:    normalize_artist(fetch_text(node, "artist")),
-          title:     fetch_text(node, "title"),
-          label:     fetch_text(node, "label"),
-          price:     fetch_price(node.css("td").last),
-          type:      fetch_type(node),
-          condition: fetch_condition(node),
-          store:     fetch_store(node)
-        }
-      end
+      find_result_elements.map { |node| fetch_record(node) }
     end
 
     private
 
     def find_result_elements
       @document.css("table.item")
+    end
+
+    def fetch_record(node)
+      {
+        artist:    normalize_artist(fetch_text(node, "artist")),
+        title:     fetch_text(node, "title"),
+        label:     fetch_text(node, "label"),
+        price:     fetch_price(node.css("td").last),
+        type:      fetch_type(node),
+        condition: fetch_condition(node),
+        store:     fetch_store(node)
+      }
     end
 
     def fetch_price(node)
