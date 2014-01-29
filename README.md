@@ -49,6 +49,20 @@ Each search result is a simple hash:
 }
 ```
 
+Or you can access it as an object:
+
+```ruby
+item = Reckless.search("Nirvana").results.first
+
+item.artist
+item.title
+item.label
+item.price
+item.type
+item.condition
+item.location
+```
+
 ### Search options
 
 - `page`      - Specify a page to fetch. Defaults to `1`
