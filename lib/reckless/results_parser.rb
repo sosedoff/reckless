@@ -7,7 +7,7 @@ module Reckless
     end
 
     def parse
-      find_result_elements.map { |node| fetch_record(node) }
+      find_result_elements.map { |node| Hashr.new(fetch_record(node)) }
     end
 
     private
