@@ -3,8 +3,8 @@ require File.expand_path("../lib/reckless/version", __FILE__)
 Gem::Specification.new do |spec|
   spec.name        = "reckless"
   spec.version     = Reckless::VERSION
-  spec.summary     = "Client for Reckless.com site"
-  spec.description = "Client for Reckless.com site"
+  spec.summary     = "Ruby client to Chicago's records store Reckless.com http://reckless.com"
+  spec.description = "Ruby client to Chicago's records store Reckless.com http://reckless.com"
   spec.homepage    = "http://github.com/sosedoff/reckless"
   spec.authors     = ["Dan Sosedoff"]
   spec.email       = ["dan.sosedoff@gmail.com"]
