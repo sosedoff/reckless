@@ -24,7 +24,7 @@ module Reckless
         price:     fetch_price(node.css("td").last),
         type:      fetch_type(node),
         condition: fetch_condition(node),
-        store:     fetch_store(node)
+        location:  fetch_location_name(node)
       }
     end
 
@@ -55,7 +55,7 @@ module Reckless
       end
     end
 
-    def fetch_store(node)
+    def fetch_location_name(node)
       match = node.to_s.scan(/<span style="color:#a33; font-weight: bold;">([\w\s]+).<\/span>/)
       match.flatten.first
     end

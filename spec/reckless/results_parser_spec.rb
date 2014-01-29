@@ -46,12 +46,12 @@ describe Reckless::ResultsParser do
         expect(record[:condition]).to eq "Very Good"
       end
 
-      it "includes store name" do
-        expect(record[:store]).to eq "Broadway and Milwaukee Ave"
+      it "includes location name" do
+        expect(record[:location]).to eq "Broadway and Milwaukee Ave"
       end
 
       it "behaves like an object" do
-        methods = %w(artist title label price type condition store).map(&:to_sym)
+        methods = %w(artist title label price type condition location).map(&:to_sym)
 
         methods.each do |name|
           expect(record.send(name)).to eq record[name]
