@@ -51,9 +51,10 @@ Each search result is a simple hash:
 
 ### Search options
 
-- `page`     - Specify a page to fetch. Defaults to `1`
-- `format`   -  Choose record format: `LP`, `CD`, `DVD`. Defaults to `LP`
-- `location` - Choose location: `Broadway`, `Milwaukee` or `Loop`. Does not have a default.
+- `page`      - Specify a page to fetch. Defaults to `1`
+- `format`    - Choose record format: `LP`, `CD`, `DVD`. Defaults to `LP`
+- `location`  - Choose location: `Broadway`, `Milwaukee` or `Loop`. Does not have a default.
+- `condition` - Specify record condition: `U` - Used, `N` - New.
 
 ## Testing
 

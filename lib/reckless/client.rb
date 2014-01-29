@@ -28,10 +28,10 @@ module Reckless
 
     def search_options(options)
       {
-        page:   options[:page]     || 1,
-        format: options[:format]   || "LP",
-        cond:   options[:cond]     || "",
-        store:  options[:location] || ""
+        page:   options[:page]      || 1,
+        format: options[:format]    || "LP",
+        cond:   options[:condition] || "",
+        store:  options[:location]  || ""
       }
     end
   end
