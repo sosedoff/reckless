@@ -45,15 +45,15 @@ Each search result is a simple hash:
   :price     => 11.99,
   :type      => "New LP",
   :condition => "Good Condition",
-  :store     => "Milwaukee Ave"
+  :location  => "Milwaukee Ave"
 }
 ```
 
 ### Search options
 
-- `page` - Specify a page to fetch. Defaults to `1`
-- `format` -  Choose record format: `LP`, `CD`, `DVD`. Defaults to `LP`
-- `store` - Choose store: `Broadway`, `Milwaukee` or `Loop`. Does not have a default.
+- `page`     - Specify a page to fetch. Defaults to `1`
+- `format`   -  Choose record format: `LP`, `CD`, `DVD`. Defaults to `LP`
+- `location` - Choose location: `Broadway`, `Milwaukee` or `Loop`. Does not have a default.
 
 ## Testing
 
