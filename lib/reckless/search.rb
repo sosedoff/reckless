@@ -27,7 +27,14 @@ module Reckless
     def parse_results_count
       matches = @body.scan(/<b>([\d]+) found.<\/b>/).flatten
 
-      unless matches.empty?
+      if matches.empty?
+        matches = @body.scan("<table class=\"item\">").flatten
+
+        if matches.any?
+          @total_results = matches.size
+          @total_pages   = 1
+        end
+      else
         @total_results = matches.first.to_i
       end
     end

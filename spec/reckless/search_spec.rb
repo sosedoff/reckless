@@ -78,4 +78,24 @@ describe Reckless::Search do
       expect(search.results).to eq []
     end
   end
+
+  describe "for page without pagination" do
+    let(:page) { fixture("no_pagination.html") }
+
+    before do
+      Faraday.stub_chain(:get, :body) { page }
+    end
+
+    it "assigs total results count" do
+      expect(search.total_results).to eq 4
+    end
+
+    it "assigns total pages count" do
+      expect(search.total_pages).to eq 1
+    end
+
+    it "assings results" do
+      expect(search.results.size).to eq 4
+    end
+  end
 end
