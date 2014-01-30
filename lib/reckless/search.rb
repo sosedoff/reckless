@@ -28,14 +28,18 @@ module Reckless
       matches = @body.scan(/<b>([\d]+) found.<\/b>/).flatten
 
       if matches.empty?
-        matches = @body.scan("<table class=\"item\">").flatten
-
-        if matches.any?
-          @total_results = matches.size
-          @total_pages   = 1
-        end
+        parse_results_without_pagination
       else
         @total_results = matches.first.to_i
+      end
+    end
+
+    def parse_results_without_pagination
+      matches = @body.scan("<table class=\"item\">").flatten
+
+      if matches.any?
+        @total_results = matches.size
+        @total_pages   = 1
       end
     end
 
