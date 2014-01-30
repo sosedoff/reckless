@@ -3,6 +3,7 @@ require "spec_helper"
 describe Reckless do
   it { should respond_to :search }
   it { should respond_to :recent_arrivals }
+  it { should respond_to :new_arrivals }
 
   before do
     Faraday.stub_chain(:get, :body) { "" }

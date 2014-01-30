@@ -16,4 +16,8 @@ module Reckless
   def self.recent_arrivals(options = {})
     Reckless::Client.new.recent_arrivals(options)
   end
+
+  def self.new_arrivals(options = {})
+    Reckless::Client.new.recent_arrivals(options)
+  end
 end
