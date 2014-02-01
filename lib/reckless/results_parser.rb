@@ -56,7 +56,7 @@ module Reckless
     end
 
     def fetch_location_name(node)
-      match = node.to_s.scan(/<span style="color:#a33; font-weight: bold;">([\w\s]+).<\/span>/)
+      match = node.to_s.scan(/<span style="color:#a33; font-weight: bold;">([\w\s\.]+)<\/span>/)
       match.flatten.first
     end
   end

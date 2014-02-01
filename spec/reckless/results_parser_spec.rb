@@ -47,7 +47,7 @@ describe Reckless::ResultsParser do
       end
 
       it "includes location name" do
-        expect(record[:location]).to eq "Broadway and Milwaukee Ave"
+        expect(record[:location]).to eq "Broadway and Milwaukee Ave."
       end
 
       it "behaves like an object" do
