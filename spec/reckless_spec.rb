@@ -20,4 +20,10 @@ describe Reckless do
       expect(described_class.recent_arrivals).to be_a Reckless::Search
     end
   end
+
+  describe ".new_arrivals" do
+    it "returns a search result" do
+      expect(described_class.new_arrivals).to be_a Reckless::Search
+    end
+  end
 end
