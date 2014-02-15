@@ -16,7 +16,7 @@ module Reckless
       if text =~ /[\d]+,[\d]+/
         text
       else
-        text.gsub(/(([\w]+),\s?([\w]+))/) do |m|
+        text.gsub(/(([\w\s]+),\s?([\w]+))/) do |m|
           m = "#{$3} #{$2}"
         end
       end
