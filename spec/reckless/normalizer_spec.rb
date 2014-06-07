@@ -26,12 +26,14 @@ describe Reckless::Normalizer do
   describe "#normalize_artist" do
     let(:examples) do
       {
-        "Beck, Jeff"                => "Jeff Beck",
-        "Beck,Jeff"                 => "Jeff Beck",
-        "Astatke, Mulatu & Band"    => "Mulatu Astatke & Band",
-        "10,000 Maniacs"            => "10,000 Maniacs",
-        "Allman Brothers Band, The" => "The Allman Brothers Band",
-        "Grateful Dead, The"        => "The Grateful Dead"
+        "Beck, Jeff"                               => "Jeff Beck",
+        "Beck,Jeff"                                => "Jeff Beck",
+        "Astatke, Mulatu & Band"                   => "Mulatu Astatke & Band",
+        "10,000 Maniacs"                           => "10,000 Maniacs",
+        "Allman Brothers Band, The"                => "The Allman Brothers Band",
+        "Grateful Dead, The"                       => "The Grateful Dead",
+        "Grateful Dead, The (Robert Hunter)"       => "The Grateful Dead (Robert Hunter)",
+        "HUMPHREY, PAUL (& THE COOL AID CHEMISTS)" => "PAUL HUMPHREY (& THE COOL AID CHEMISTS)"
       }
     end
 
