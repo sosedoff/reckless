@@ -30,7 +30,8 @@ describe Reckless::Normalizer do
         "Beck,Jeff"                 => "Jeff Beck",
         "Astatke, Mulatu & Band"    => "Mulatu Astatke & Band",
         "10,000 Maniacs"            => "10,000 Maniacs",
-        "Allman Brothers Band, The" => "The Allman Brothers Band"
+        "Allman Brothers Band, The" => "The Allman Brothers Band",
+        "Grateful Dead, The"        => "The Grateful Dead"
       }
     end
 
