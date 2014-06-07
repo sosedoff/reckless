@@ -33,7 +33,8 @@ describe Reckless::Normalizer do
         "Allman Brothers Band, The"                => "The Allman Brothers Band",
         "Grateful Dead, The"                       => "The Grateful Dead",
         "Grateful Dead, The (Robert Hunter)"       => "The Grateful Dead (Robert Hunter)",
-        "HUMPHREY, PAUL (& THE COOL AID CHEMISTS)" => "PAUL HUMPHREY (& THE COOL AID CHEMISTS)"
+        "HUMPHREY, PAUL (& THE COOL AID CHEMISTS)" => "PAUL HUMPHREY (& THE COOL AID CHEMISTS)",
+        "Turner, Ike & Tina"                       => "Ike & Tina Turner"
       }
     end
 
